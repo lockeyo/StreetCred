@@ -1,3 +1,14 @@
+#mc-embedded-subscribe{
+    background: transparent;
+    border-color: #fff !important;
+}
+
+#mc-embedded-subscribe:hover,{
+  background: #D22A3D;
+  border-color: #fff !important;
+}
+
+
 html,
 body {
   width: 100%;
@@ -52,7 +63,7 @@ section {
 }
 
 section h2 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 #mainNav {
@@ -88,6 +99,10 @@ section h2 {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+#mainNav .navbar-nav li{
+  padding: 8px 10px;
 }
 
 #mainNav .navbar-nav > li > a.active {
@@ -204,7 +219,7 @@ section.download {
 }
 
 section.download h2 {
-  font-size: 50px;
+  font-size: 30px;
   margin-top: 0;
 }
 
@@ -230,7 +245,7 @@ section.download .badges .badge-link img {
 
 @media (min-width: 768px) {
   section.download h2 {
-    font-size: 70px;
+    font-size: 40px;
   }
 }
 
