@@ -10,11 +10,33 @@
       .hide{
         display: none;
       }
+
+      #timeYouWalked{
+          font-size: 30px;
+          text-align: center;
+      }
+
     </style>
   </head>
   <body id="body">
-    <h1>StreetCred – WebApp – Test</h1>
+    <h1 style="text-align: center;">
+      StreetCred<br /> WebApp Test
+    </h1>
 
+    <h3 style="text-align: center;">Win a $25 Amazon Gift card in 5 minutes</h3>
+
+    <p>
+      We want to prove that our product works therefore we need you help. Just walk
+      for ten minutes. We'll track your movement with our software. If you are moving
+      we'll count down the time. After you walked ten minutes you should see a success
+      message and you can type in your email address to win the $25 Amazon Gift card.
+      We wish you best of luck.
+    </p>
+
+    <div id="timeYouWalked"></div>
+    <h3 style="text-align: center;">Seconds to go</h3>
+
+    <div style="display: none;">
     <!-- Get the users E-Mail Adress -->
 
       <h3>What's the user doing?</h3>
@@ -23,7 +45,6 @@
       <div id="result">
       </div>
 
-      <div id="timeYouWalked"></div>
 
       <h4>Motion</h4>
       <table>
@@ -39,6 +60,7 @@
         <tr><td>Y</td><td id="orientationY">0</td></tr>
         <tr><td>Z</td><td id="orientationZ">0</td></tr>
       </table>
+    </div>
 
   </body>
 </html>
@@ -68,13 +90,17 @@
     "z": []
   }
 
-  var timeYouWalked = 0;
+  var timeYouWalked = 30;
   var statusMessage = null;
 
   setInterval(function() {
     // every second ask fo the status
     if (statusMessage == "using your phone while walking"){
-        timeYouWalked += 1;
+        timeYouWalked -= 1;
+    }
+
+    if(timeYouWalked <= 0){
+      window.location.replace("https://www.menux.de/");
     }
   }, 1000);
 
