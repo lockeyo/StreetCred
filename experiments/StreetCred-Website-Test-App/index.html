@@ -5,34 +5,52 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta name="author" content="Felix Krause">
     <meta charset="UTF-8">
+
+    <style type="text/css">
+      .hide{
+        display: none;
+      }
+    </style>
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us14.list-manage.com","uuid":"60f9a4de8bb5c89ee8af8b807","lid":"94a26d5358"}) })</script>
+
   </head>
   <body id="body">
     <h1>StreetCred – WebApp – Test</h1>
 
-    <h3>What's the user doing?</h3>
+    <!-- Get the users E-Mail Adress -->
 
-    <h5 id="chances">Chances are, you are</h5>
-    <div id="result">
+    <div id="email">
     </div>
-    <img id="qr" src="assets/qr-code.png">
 
-    <h4>Motion</h4>
-    <table>
-      <tr><td>X</td><td id="motionX">0</td></tr>
-      <tr><td>Y</td><td id="motionY">0</td></tr>
-      <tr><td>Z</td><td id="motionZ">0</td></tr>
-      <tr><td>Overall</td><td id="motionOveral">0</td></tr>
-    </table>
+    <div id="acction" class="hide">
+      <h3>What's the user doing?</h3>
 
-    <h4>Orientation</h4>
-    <table>
-      <tr><td>X</td><td id="orientationX">0</td></tr>
-      <tr><td>Y</td><td id="orientationY">0</td></tr>
-      <tr><td>Z</td><td id="orientationZ">0</td></tr>
-    </table>
+      <h5 id="chances">Chances are, you are</h5>
+      <div id="result">
+      </div>
+      <img id="qr" src="assets/qr-code.png">
+
+      <h4>Motion</h4>
+      <table>
+        <tr><td>X</td><td id="motionX">0</td></tr>
+        <tr><td>Y</td><td id="motionY">0</td></tr>
+        <tr><td>Z</td><td id="motionZ">0</td></tr>
+        <tr><td>Overall</td><td id="motionOveral">0</td></tr>
+      </table>
+
+      <h4>Orientation</h4>
+      <table>
+        <tr><td>X</td><td id="orientationX">0</td></tr>
+        <tr><td>Y</td><td id="orientationY">0</td></tr>
+        <tr><td>Z</td><td id="orientationZ">0</td></tr>
+      </table>
+    </div>
 
   </body>
 </html>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 <script type="text/javascript">
   // via https://stackoverflow.com/questions/9050345/
