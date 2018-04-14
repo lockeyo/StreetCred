@@ -52,9 +52,10 @@ To use our software you need to install special tools.
 * Mobile App
 	* React Native App
 * Website (MArketing)
-  * Bootstrap + Drift 
+  * Bootstrap + Drift
 * Experiments
-  *  StreetCred Test app
+  * StreetCred Test app
+  * StreetCred-Website-Test-App
 
 
 ## Build instructions
