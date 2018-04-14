@@ -1,6 +1,6 @@
-# RoadGenius @ BCG DV Hacks: Mobility
+# StreetCred @ BCG DV Hacks: Mobility
 
-RoadGenius was created during the BCG DV Hacks: Mobility in Mannhatahn Beach, CA. We create a product to help reduce the enviromental footprint by using the latest technology and research in the field of psychology, human compuer interaction.
+StreetCred was created during the BCG DV Hacks: Mobility in Mannhatahn Beach, CA. We create a product to help reduce the enviromental footprint by using the latest technology and research in the field of psychology, human compuer interaction.
 
 ## Mission
 
