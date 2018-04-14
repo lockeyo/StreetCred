@@ -36,14 +36,16 @@
     <div id="timeYouWalked"></div>
     <h3 style="text-align: center;">Seconds to go</h3>
 
+    <h5 id="chances" style="text-align: center;">Chances are, you are</h5>
+    <div id="result">
+    </div>
+
     <div style="display: none;">
     <!-- Get the users E-Mail Adress -->
 
       <h3>What's the user doing?</h3>
 
-      <h5 id="chances">Chances are, you are</h5>
-      <div id="result">
-      </div>
+
 
 
       <h4>Motion</h4>
@@ -95,7 +97,7 @@
 
   setInterval(function() {
     // every second ask fo the status
-    if (statusMessage == "using your phone while walking"){
+    if (statusMessage == "walking. Keep it up."){
         timeYouWalked -= 1;
     }
 
@@ -125,13 +127,13 @@
       setStatus("lying on your back, with your phone up")
     } else if (historicOrientation["y"].last() >= 30 && historicOrientation["y"].last() < 70) {
       if (movement > 18) {
-        setStatus("using your phone while walking")
+        setStatus("walking. Keep gooing.")
       } else {
         setStatus("using your phone, sitting or standing")
       }
     } else if (historicOrientation["y"].last() >= 70 && historicOrientation["y"].last() < 95) {
       if (movement > 18) {
-        setStatus("using your phone while walking")
+        setStatus("walking. Keep it up.")
       } else {
         setStatus("taking a picture")
       }
@@ -141,7 +143,7 @@
       setStatus("using the phone on a table")
     } else {
       if (movement > 18) {
-        setStatus("using your phone while walking")
+        setStatus("walking. Keep it up.")
       } else {
         setStatus("using your phone, sitting or standing")
       }
