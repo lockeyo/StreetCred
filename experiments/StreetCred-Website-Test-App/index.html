@@ -57,8 +57,6 @@
     document.getElementById("body").style.display = 'block'
   }, 500)
 
-
-
   var historicMotion = {
     "x": [],
     "y": [],
@@ -73,12 +71,12 @@
   var timeYouWalked = 0;
   var statusMessage = null;
 
-  setTimeout(function() {
+  setInterval(function() {
     // every second ask fo the status
     if (statusMessage == "using your phone while walking"){
         timeYouWalked += 1;
     }
-  }, 1000)
+  }, 1000);
 
   function setStatus(status) {
     statusMessage = status;
@@ -86,6 +84,8 @@
   }
 
   function updateStatus() {
+    document.getElementById("timeYouWalked").textContent = timeYouWalked
+
     let movement = mostRecentMovementOverall(75)
     document.getElementById("motionOveral").textContent = movement.toFixed(2)
 
@@ -122,7 +122,6 @@
     }
   }
 
-
   function mostRecentMovementOverall(numberOfHistoricPoints) {
     return (mostRecentMovement(historicMotion["x"], numberOfHistoricPoints, true) +
             mostRecentMovement(historicMotion["y"], numberOfHistoricPoints, true) +
@@ -144,7 +143,6 @@
     return 0 // not enough data yet
   }
 
-
   var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
   if (isMobile != null) {
     window.addEventListener("devicemotion", motion, false);
@@ -153,8 +151,6 @@
       document.getElementById("motionX").textContent = (mostRecentMovement(historicMotion["x"], 150, false)).toFixed(2)
       document.getElementById("motionY").textContent = (mostRecentMovement(historicMotion["y"], 150, false)).toFixed(2)
       document.getElementById("motionZ").textContent = (mostRecentMovement(historicMotion["z"], 150, false)).toFixed(2)
-
-      document.getElementById("timeYouWalked").textContent = timeYouWalked
 
       historicMotion["x"].push(event.acceleration.x)
       historicMotion["y"].push(event.acceleration.y)
@@ -168,8 +164,6 @@
       document.getElementById("orientationY").textContent = Math.round(event.beta)
       document.getElementById("orientationZ").textContent = Math.round(event.gamma)
 
-      document.getElementById("timeYouWalked").textContent = timeYouWalked
-
       historicOrientation["x"].push(event.alpha)
       historicOrientation["y"].push(event.beta)
       historicOrientation["z"].push(event.gamma)
@@ -177,7 +171,6 @@
     setInterval(updateStatus, 100)
   } else {
     setStatus("Please open this site on your smartphone")
-    document.getElementById("qr").style.display = 'block';
     document.getElementById("chances").style.display = 'none';
   }
 };
