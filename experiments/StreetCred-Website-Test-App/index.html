@@ -11,25 +11,19 @@
         display: none;
       }
     </style>
-
-<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us14.list-manage.com","uuid":"60f9a4de8bb5c89ee8af8b807","lid":"94a26d5358"}) })</script>
-
   </head>
   <body id="body">
     <h1>StreetCred – WebApp – Test</h1>
 
     <!-- Get the users E-Mail Adress -->
 
-    <div id="email">
-    </div>
-
-    <div id="acction" class="hide">
       <h3>What's the user doing?</h3>
 
       <h5 id="chances">Chances are, you are</h5>
       <div id="result">
       </div>
-      <img id="qr" src="assets/qr-code.png">
+
+      <div id="timeYouWalked"></div>
 
       <h4>Motion</h4>
       <table>
@@ -45,7 +39,6 @@
         <tr><td>Y</td><td id="orientationY">0</td></tr>
         <tr><td>Z</td><td id="orientationZ">0</td></tr>
       </table>
-    </div>
 
   </body>
 </html>
@@ -64,6 +57,8 @@
     document.getElementById("body").style.display = 'block'
   }, 500)
 
+
+
   var historicMotion = {
     "x": [],
     "y": [],
@@ -75,7 +70,18 @@
     "z": []
   }
 
+  var timeYouWalked = 0;
+  var statusMessage = null;
+
+  setTimeout(function() {
+    // every second ask fo the status
+    if (statusMessage == "using your phone while walking"){
+        timeYouWalked += 1;
+    }
+  }, 1000)
+
   function setStatus(status) {
+    statusMessage = status;
     document.getElementById("result").textContent = status
   }
 
@@ -148,6 +154,8 @@
       document.getElementById("motionY").textContent = (mostRecentMovement(historicMotion["y"], 150, false)).toFixed(2)
       document.getElementById("motionZ").textContent = (mostRecentMovement(historicMotion["z"], 150, false)).toFixed(2)
 
+      document.getElementById("timeYouWalked").textContent = timeYouWalked
+
       historicMotion["x"].push(event.acceleration.x)
       historicMotion["y"].push(event.acceleration.y)
       historicMotion["z"].push(event.acceleration.z)
@@ -159,6 +167,8 @@
       document.getElementById("orientationX").textContent = Math.round(event.alpha)
       document.getElementById("orientationY").textContent = Math.round(event.beta)
       document.getElementById("orientationZ").textContent = Math.round(event.gamma)
+
+      document.getElementById("timeYouWalked").textContent = timeYouWalked
 
       historicOrientation["x"].push(event.alpha)
       historicOrientation["y"].push(event.beta)
@@ -222,7 +232,5 @@
     color: #449;
   }
 
-  #qr {
-    display: none;
-  }
+
 </style>
