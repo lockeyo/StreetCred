@@ -23,7 +23,7 @@ We use AI-powered transportation mode classification and gamification to incenti
 	* Contribution: Business, Mobile App, API Server
 * Will Newman
 	* E-Mail: wnewman88@gmail.com
-	* GitHub username: https://github.com/NAMWEN
+	* GitHub username: https://github.com/namwen
 	* Contribution: Technology stack, Mobile App, API Server
 * Marcel Engelmann
 	* E-Mail: marcel.engelmann@menux.de
