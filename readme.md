@@ -1,3 +1,5 @@
+![alt text](https://github.com/lockeyo/StreetCred/blob/master/website/img/streetcred-logo-long.png)
+
 # StreetCred @ BCG DV Hacks: Mobility
 
 StreetCred was created during the BCG DV Hacks: Mobility in Manhattan Beach, CA. Our product aims to reduce our collective carbon footprint by using the latest technology and research in the fields of artificial intelligence, psychology, and human compuer interaction.
