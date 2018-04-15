@@ -92,7 +92,13 @@
     "z": []
   }
 
-  var timeYouWalked = 600;
+  if(localStorage.getItem("timeYouWalked") == undefined){
+    var timeYouWalked = 600;
+  }
+  else{
+    var timeYouWalked = localStorage.getItem("timeYouWalked");
+  };
+
   var statusMessage = null;
 
   setInterval(function() {
@@ -100,6 +106,7 @@
     if (statusMessage == "walking. Keep it up."){
         timeYouWalked -= 1;
         document.getElementById("result").style.backgroundColor = "green";
+        localStorage.timeYouWalked = timeYouWalked;
     }
     else{
       document.getElementById("result").style.backgroundColor = "red";
