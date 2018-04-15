@@ -1,4 +1,4 @@
-![alt text](https://github.com/lockeyo/StreetCred/blob/master/website/img/streetcred-logo-long.png)
+![StreetCred](https://github.com/lockeyo/StreetCred/blob/master/website/img/streetcred-logo.png)
 
 # StreetCred @ BCG DV Hacks: Mobility
 
