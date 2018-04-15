@@ -23,7 +23,7 @@
       StreetCred<br /> WebApp Test
     </h1>
 
-    <h3 style="text-align: center;">Win a $25 Amazon Gift card in 5 minutes</h3>
+    <h3 style="text-align: center;">Win a $25 Amazon Gift card in 10 minutes</h3>
 
     <p>
       We want to prove that our product works therefore we need you help. Just walk
@@ -92,7 +92,13 @@
     "z": []
   }
 
-  var timeYouWalked = 600;
+  if(localStorage.getItem("timeYouWalked") == undefined){
+    var timeYouWalked = 600;
+  }
+  else{
+    var timeYouWalked = localStorage.getItem("timeYouWalked");
+  };
+
   var statusMessage = null;
 
   setInterval(function() {
@@ -100,6 +106,7 @@
     if (statusMessage == "walking. Keep it up."){
         timeYouWalked -= 1;
         document.getElementById("result").style.backgroundColor = "green";
+        localStorage.timeYouWalked = timeYouWalked;
     }
     else{
       document.getElementById("result").style.backgroundColor = "red";
@@ -123,9 +130,7 @@
 
     // Below some stupid, very basic code to guess what the user is doing
     // As described in the README, this is just a proof of concept
-    if (mostRecentMovementOverall(4000) > 40) { // TODO: haven't tested this, 1,000 so it's a longer time
-      setStatus("driving or other form of transportation")
-    } else if (historicOrientation["z"].last() > 70 || historicOrientation["z"].last() < -70) {
+    if (historicOrientation["z"].last() > 70 || historicOrientation["z"].last() < -70) {
       setStatus("lying in bed sideways, or taking a landscape picture")
     } else if (historicOrientation["y"].last() > 160 || historicOrientation["y"].last() < -160) {
       setStatus("lying on your back, with your phone up")
