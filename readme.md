@@ -63,7 +63,7 @@ To use our software you need to install special tools.
 
 ## Build instructions
 
-To run our code you have to run some comands
+To run our code you have to run some commands
 
 ### API Server
 
@@ -77,7 +77,7 @@ To run our code you have to run some comands
 
 * Static Bootstrap app
 
-## Honorble mensions
+## Honorble mentions
 
 We have used many Open Source libaries and technologies. This is the place where we show which kind of technologies we have used during the hackathon and why we archived the current status of our product.
 
