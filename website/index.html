@@ -1,188 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta name="author" content="Felix Krause">
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>StreetCred</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- MailChimp -->
+    <link href="https://cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #mc_embed_signup{background:; clear:left; font:14px Helvetica,Arial,sans-serif; }
+      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/new-age.css" rel="stylesheet">
 
     <style type="text/css">
-      .hide{
-        display: none;
-      }
 
-      #timeYouWalked{
-          font-size: 30px;
-          text-align: center;
-      }
-
+    .videoWrapper {
+    	position: relative;
+    	padding-bottom: 56.25%; /* 16:9 */
+    	padding-top: 25px;
+    	height: 0;
+    }
+    .videoWrapper iframe {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    }
     </style>
+
+    <!-- Drift Code -->
+    <!-- Start of Async Drift Code -->
+    <script>
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+      t.factory = function(e) {
+        return function() {
+          var n;
+          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, i;
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('y34xifxxdtwg');
+    </script>
+    <!-- End of Async Drift Code -->
+
   </head>
-  <body id="body">
-    <h1 style="text-align: center;">
-      StreetCred<br /> WebApp Test
-    </h1>
 
-    <h3 style="text-align: center;">Win a $25 Amazon Gift card in 10 minutes</h3>
-
-    <p>
-      We want to prove that our product works therefore we need you help. Just walk
-      for ten minutes. We'll track your movement with our software. If you are moving
-      we'll count down the time. After you walked ten minutes you should see a success
-      message and you can type in your email address to win the $25 Amazon Gift card.
-      We wish you best of luck.
-    </p>
-
-    <div id="timeYouWalked"></div>
-    <h3 style="text-align: center;">Seconds to go</h3>
-
-    <h5 id="chances" style="text-align: center;">Chances are, you are</h5>
-    <div id="result">
-    </div>
-
-    <div style="display: none;">
-    <!-- Get the users E-Mail Adress -->
-
-      <h3>What's the user doing?</h3>
-
-
-
-
-      <h4>Motion</h4>
-      <table>
-        <tr><td>X</td><td id="motionX">0</td></tr>
-        <tr><td>Y</td><td id="motionY">0</td></tr>
-        <tr><td>Z</td><td id="motionZ">0</td></tr>
-        <tr><td>Overall</td><td id="motionOveral">0</td></tr>
-      </table>
-
-      <h4>Orientation</h4>
-      <table>
-        <tr><td>X</td><td id="orientationX">0</td></tr>
-        <tr><td>Y</td><td id="orientationY">0</td></tr>
-        <tr><td>Z</td><td id="orientationZ">0</td></tr>
-      </table>
-    </div>
-
-  </body>
-</html>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-<script type="text/javascript">
-  // via https://stackoverflow.com/questions/9050345/
-  if (!Array.prototype.last) {
-    Array.prototype.last = function() {
-      return this[this.length - 1];
-  }
-
-  // Artifical loading for a bit to make sure the gyro loads the data first
-  setTimeout(function() {
-    document.getElementById("body").style.display = 'block'
-  }, 500)
-
-  var historicMotion = {
-    "x": [],
-    "y": [],
-    "z": []
-  }
-  var historicOrientation = {
-    "x": [],
-    "y": [],
-    "z": []
-  }
-
-  var timeYouWalked = 600;
-  var statusMessage = null;
-
-  setInterval(function() {
-    // every second ask fo the status
-    if (statusMessage == "walking. Keep it up."){
-        timeYouWalked -= 1;
-        document.getElementById("result").style.backgroundColor = "green";
-    }
-    else{
-      document.getElementById("result").style.backgroundColor = "red";
-    }
-
-    if(timeYouWalked <= 0){
-        window.location.replace("http://streetcred.menux.org/testapp/winner.html");
-    }
-  }, 1000);
-
-  function setStatus(status) {
-    statusMessage = status;
-    document.getElementById("result").textContent = status
-  }
-
-  function updateStatus() {
-    document.getElementById("timeYouWalked").textContent = timeYouWalked
-
-    let movement = mostRecentMovementOverall(75)
-    document.getElementById("motionOveral").textContent = movement.toFixed(2)
-
-    // Below some stupid, very basic code to guess what the user is doing
-    // As described in the README, this is just a proof of concept
-    if (historicOrientation["z"].last() > 70 || historicOrientation["z"].last() < -70) {
-      setStatus("lying in bed sideways, or taking a landscape picture")
-    } else if (historicOrientation["y"].last() > 160 || historicOrientation["y"].last() < -160) {
-      setStatus("lying on your back, with your phone up")
-    } else if (historicOrientation["y"].last() >= 30 && historicOrientation["y"].last() < 70) {
-      if (movement > 18) {
-        setStatus("walking. Keep gooing.")
-      } else {
-        setStatus("using your phone, sitting or standing")
-      }
-    } else if (historicOrientation["y"].last() >= 70 && historicOrientation["y"].last() < 95) {
-      if (movement > 18) {
-        setStatus("walking. Keep it up.")
-      } else {
-        setStatus("taking a picture")
-      }
-    } else if (historicOrientation["y"].last() >= 95 && historicOrientation["y"].last() < 120) {
-      setStatus("taking a selfie")
-    } else if (Math.round(historicOrientation["z"].last()) == 0 && Math.round(historicOrientation["y"].last()) == 0) {
-      setStatus("using the phone on a table")
-    } else {
-      if (movement > 18) {
-        setStatus("walking. Keep it up.")
-      } else {
-        setStatus("using your phone, sitting or standing")
-      }
-    }
-  }
-
-  function mostRecentMovementOverall(numberOfHistoricPoints) {
-    return (mostRecentMovement(historicMotion["x"], numberOfHistoricPoints, true) +
-            mostRecentMovement(historicMotion["y"], numberOfHistoricPoints, true) +
-            mostRecentMovement(historicMotion["z"], numberOfHistoricPoints, true)) / 3.0
-  }
-
-  // numberOfHistoricPoints: 100 is about 3 seconds
-  function mostRecentMovement(array, numberOfHistoricPoints, removeNegatives) {
-    if (array.length > numberOfHistoricPoints) {
-      totalSum = 0
-      for (var toCount = 0; toCount < numberOfHistoricPoints; toCount++) {
-        currentElement = array[array.length - toCount - 1]
-        currentElement *= (1 - toCount / numberOfHistoricPoints) // weight the most recent data more
-        if (currentElement < 0 && removeNegatives) currentElement = currentElement * -1
-        if (currentElement > 0.1 || currentElement < -0.1) totalSum += currentElement
-      }
-      return totalSum * 100 / numberOfHistoricPoints
-    }
-    return 0 // not enough data yet
-  }
-
-  var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
-  if (isMobile != null) {
-    window.addEventListener("devicemotion", motion, false);
-
-<<<<<<< HEAD
-    function motion(event) {
-      document.getElementById("motionX").textContent = (mostRecentMovement(historicMotion["x"], 150, false)).toFixed(2)
-      document.getElementById("motionY").textContent = (mostRecentMovement(historicMotion["y"], 150, false)).toFixed(2)
-      document.getElementById("motionZ").textContent = (mostRecentMovement(historicMotion["z"], 150, false)).toFixed(2)
-=======
   <body id="page-top">
 
     <!-- Navigation -->
@@ -289,7 +183,7 @@
         <div class="row">
           <div class="col-md-8 mx-auto">
 
-            <h2 class="section-heading">Help us prove our assumptions</h2>
+            <h2 class="section-heading">Help us to proof our assumptions</h2>
             <p>
               We know it's hard to get people motivated by small incentives. We think that big prizes and fun competition will motivate people to make sustainable transportation decisions. We developed a small web-app, which tracks your mobility behavior from your phone. If you have an iPhone, feel free to test out our web app below.
             </p>
@@ -611,80 +505,8 @@
 
       gtag('config', 'UA-89586712-4');
     </script>
->>>>>>> aa62d360e924fb8b7824a2783c1d5953260413d4
-
-      historicMotion["x"].push(event.acceleration.x)
-      historicMotion["y"].push(event.acceleration.y)
-      historicMotion["z"].push(event.acceleration.z)
-    }
-
-    window.addEventListener("deviceorientation", orientation, false);
-
-    function orientation(event) {
-      document.getElementById("orientationX").textContent = Math.round(event.alpha)
-      document.getElementById("orientationY").textContent = Math.round(event.beta)
-      document.getElementById("orientationZ").textContent = Math.round(event.gamma)
-
-      historicOrientation["x"].push(event.alpha)
-      historicOrientation["y"].push(event.beta)
-      historicOrientation["z"].push(event.gamma)
-    }
-    setInterval(updateStatus, 100)
-  } else {
-    setStatus("Please open this site on your smartphone")
-    document.getElementById("chances").style.display = 'none';
-  }
-};
-</script>
-
-<style type="text/css">
-  body {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-  }
-  #result {
-    background-color: red;
-    padding: 20px;
-    color: white;
-    font-weight: bold;
-  }
-  table {
-    color: #333;
-    border-collapse:
-    collapse; border-spacing: 0;
-  }
-
-  td, th {
-      border: 1px solid transparent;
-      height: 30px;
-      width: 100px;
-      transition: all 0.1s;
-  }
-
-  td {
-    height: 25px;
-  }
-
-  #body {
-    display: none;
-  }
-
-  th {
-      background: #DFDFDF;
-      font-weight: bold;
-  }
-
-  td {
-      background: #FAFAFA;
-      text-align: center;
-  }
-
-  .footer {
-    color: #777;
-  }
-  .footer > a {
-    color: #449;
-  }
 
 
-</style>
+  </body>
+
+</html>
