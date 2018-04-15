@@ -2,21 +2,3 @@ index:
   name: Home
   icon: fe fe-home
   url: index.html
-
-interface:
-  name: Interface
-  icon: fe fe-box
-  subpages:
-    cards:
-      name: Cards design
-      icon: fe fe-box
-      url: cards.html
-
-    charts:
-      name: Charts
-      icon: fe fe-pie-chart
-      url: charts.html
-
-    pricing-cards:
-      name: Pricing cards
-      url: pricing-cards.html
