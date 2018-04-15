@@ -123,9 +123,7 @@
 
     // Below some stupid, very basic code to guess what the user is doing
     // As described in the README, this is just a proof of concept
-    if (mostRecentMovementOverall(4000) > 40) { // TODO: haven't tested this, 1,000 so it's a longer time
-      setStatus("driving or other form of transportation")
-    } else if (historicOrientation["z"].last() > 70 || historicOrientation["z"].last() < -70) {
+    if (historicOrientation["z"].last() > 70 || historicOrientation["z"].last() < -70) {
       setStatus("lying in bed sideways, or taking a landscape picture")
     } else if (historicOrientation["y"].last() > 160 || historicOrientation["y"].last() < -160) {
       setStatus("lying on your back, with your phone up")
