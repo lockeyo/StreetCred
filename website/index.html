@@ -177,10 +177,441 @@
   if (isMobile != null) {
     window.addEventListener("devicemotion", motion, false);
 
+<<<<<<< HEAD
     function motion(event) {
       document.getElementById("motionX").textContent = (mostRecentMovement(historicMotion["x"], 150, false)).toFixed(2)
       document.getElementById("motionY").textContent = (mostRecentMovement(historicMotion["y"], 150, false)).toFixed(2)
       document.getElementById("motionZ").textContent = (mostRecentMovement(historicMotion["z"], 150, false)).toFixed(2)
+=======
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">StreetCred</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Solution">Our solution</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Subscribe">Get engaged</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Company">Company</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Individual">Individual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#City">City</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead" id="Home">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">StreetCred is a gamified platform for companies and cities to reward members for prioritizing sustainability when making personal transportation decisions.</h1>
+              <p>
+                We use AI-powered transportation mode classification and gamification to incentivize solo drivers to improve their mobility habits and reduce their carbon footprints. We offer companies a way to reduce parking costs and create happier, healthier employees.
+              </p>
+
+              <p>What type of solution are you looking for?</p>
+              <br >
+
+              <a href="#Individual" class="btn btn-outline btn-xl js-scroll-trigger">Individual</a> &nbsp;&nbsp;
+              <a href="#Company" class="btn btn-outline btn-xl js-scroll-trigger">Company</a> &nbsp;&nbsp;
+              <a href="#City" class="btn btn-outline btn-xl js-scroll-trigger">City</a>
+            </div>
+          </div>
+          <div class="col-lg-5 my-auto">
+            <img src="img/visual.png" width="100%" alt="">
+
+
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <!-- <img src="img/demo-screen-1.jpg" class="img-fluid" alt=""> -->
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="text-center" id="Solution">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+
+            <h2 class="section-heading">This is our solution</h2>
+            <p>
+              How can we improve urban transportation, save companies money, and make commuting fun? This is the StreetCred promise:
+            </p>
+
+            <div class="videoWrapper">
+                <!-- Copy & Pasted from YouTube -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qMpz4NCUEvA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="download bg-primary text-center" id="Subscribe">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+
+            <h2 class="section-heading">Help us prove our assumptions</h2>
+            <p>
+              We know it's hard to get people motivated by small incentives. We think that big prizes and fun competition will motivate people to make sustainable transportation decisions. We developed a small web-app, which tracks your mobility behavior from your phone. If you have an iPhone, feel free to test out our web app below.
+            </p>
+
+            <center>
+                <a href="http://streetcred.menux.org/testapp/" target="_blank" class="btn btn-outline btn-xl js-scroll-trigger">Start our web prototype</a>
+            </center>
+
+            <br />
+            <br />
+
+            <h2 class="section-heading">You want to have the best mobility services, ever?</h2>
+            <p>We'll soon launch to the public. Apply here with your e-mail address to be one of the first people to try the StreetCred app.</p>
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="https://menux.us14.list-manage.com/subscribe/post?u=60f9a4de8bb5c89ee8af8b807&amp;id=94a26d5358" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+
+                	  <center><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address" required></center>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_60f9a4de8bb5c89ee8af8b807_94a26d5358" tabindex="-1" value=""></div>
+                      <div class="clear">
+                        <center>
+                          <input type="submit" value="Apply now" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline btn-xl js-scroll-trigger">
+                        </center>
+                      </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="Company">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>Company platform</h2>
+          <p class="text-muted">Save money on parking, your employees healthcare, and become the favorite company of your city!</p>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img src="img/companies.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-credit-card text-primary"></i>
+                    <h3>Save a lot of money</h3>
+                    <p class="text-muted">We want companies to save money! We do this by reducing the need for renting parking spaces, reduced healthcare plans and higher count of applicants, becuase of our "Green Place to Work" badge.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-people text-primary"></i>
+                    <h3>Happy and healthy employees</h3>
+                    <p class="text-muted">Happier and healthy employees are the source for every profitable business. Without the best people a company can not archive anything. With our system your employees are healthier and happier.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-home text-primary"></i>
+                    <h3>Be a green company</h3>
+                    <p class="text-muted">Become part of the community and be loved by your city mayor. As a green company you help your city become more attractive for visitors as well as inhabitants.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-trophy text-primary"></i>
+                    <h3>Offer the best perks</h3>
+                    <p class="text-muted">People stay at companies, that care about their employees. With our system you have the unquie possiblity to creat custom challenges for your employees and make them engaed.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Company end -->
+
+    <section class="features" id="Individual">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>Individual app and platform</h2>
+          <p class="text-muted">Get better mobility offers, the chance to win huge prizes and help the world become a better place.</p>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img src="img/individuals.jpg" class="img-fluid" alt="">
+
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-screen-smartphone text-primary"></i>
+                    <h3>Save up to 30%</h3>
+                    <p class="text-muted">We provide you with an cool app to find out more about the best mobility services available for you. Save up to 30% of your current cost of mobility per year.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-trophy text-primary"></i>
+                    <h3>Win big time</h3>
+                    <p class="text-muted">We partner up with companies, cities and non-profits to provide awesome prizes for helping the world to become a better place. Win up to $50,000 as your are being part of this new social movement.<p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-present text-primary"></i>
+                    <h3>Become a mobility hero</h3>
+                    <p class="text-muted">Every small step in the field of sustainablity is a big leap forward for the whole world. With our app ypu can become the hero in sustainable mobility of your neighborhood and get the recognition you deserve.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-clock text-primary"></i>
+                    <h3>More time for you</h3>
+                    <p class="text-muted">People lose 38 hours of their lives in congestion per year. We can reduce this together. With the use of our app, you contribute to the fact that you can soon spend more time with friends or important places than to stand unnecessarily in a traffic jam.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- City platform start -->
+    <section class="features" id="City">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>City platform</h2>
+          <p class="text-muted">Become the most progressive city in the world, get attractive for new businesses and have the happiest inhabitants.</p>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img src="img/cities.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-heart text-primary"></i>
+                    <h3>Make your inhabitants happy</h3>
+                    <p class="text-muted">If your inhabitants are happy they'll support you. You can make them happy if you care about the way people move around. Give them the best mobility options and you have solved a major part of their needs.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-briefcase text-primary"></i>
+                    <h3>Become the hubspot for new business</h3>
+                    <p class="text-muted">Getting to and from work is essential if you run a business. If your city is famous for having the best mobility options you can attract some of the best companies to open a new branch in you city, which means higher tax income.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-user text-primary"></i>
+                    <h3>Get more visitors for your city</h3>
+                    <p class="text-muted">If your city is know to be a good place to have a great time you'll attract more visitors. This makes the businesses happy, because there are more people with money which they can serve.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-trophy text-primary"></i>
+                    <h3>Reach the climate goals</h3>
+                    <p class="text-muted">Reaching climate goals, especialy the goals set for the greenhouse gas emissions are very important. With our system you are on step closer to archive the goals and be on the front page of many newspapers. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-content">
+        <div class="container">
+          <h2>Stop waiting.<br>Get engaged.</h2>
+          <a href="#Subscribe" class="btn btn-outline btn-xl js-scroll-trigger">Let's get started!</a>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </section>
+
+    <section class="contact bg-primary" id="contact">
+      <div class="container">
+        <h2>We
+          <i class="fa fa-heart"></i>
+          new friends!
+          <br />
+          Join our movement and actually change the world. </h2>
+
+          <div id="mc_embed_signup">
+              <form action="https://menux.us14.list-manage.com/subscribe/post?u=60f9a4de8bb5c89ee8af8b807&amp;id=94a26d5358" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+
+                  <center><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address" required></center>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_60f9a4de8bb5c89ee8af8b807_94a26d5358" tabindex="-1" value=""></div>
+                    <div class="clear">
+                      <center>
+                        <input type="submit" value="Apply now" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline btn-xl js-scroll-trigger">
+                      </center>
+                    </div>
+                  </div>
+              </form>
+          </div>
+
+          <!--
+        <ul class="list-inline list-social">
+          <li class="list-inline-item social-twitter">
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item social-facebook">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item social-google-plus">
+            <a href="#">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+      -->
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; StreetCred 2018. All Rights Reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Privacy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/new-age.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89586712-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-89586712-4');
+    </script>
+>>>>>>> aa62d360e924fb8b7824a2783c1d5953260413d4
 
       historicMotion["x"].push(event.acceleration.x)
       historicMotion["y"].push(event.acceleration.y)
