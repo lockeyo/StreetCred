@@ -43,6 +43,7 @@ To use our software you need to install special tools.
 * Amazon Web Service
 * Sentiance SDK / API
 * Google Maps API
+* Firebase
 
 ## Code structure
 
@@ -65,14 +66,15 @@ To run our code you have to run some comands
 
 ### API Server
 
+* The API is run on a Firebase server
 
 ### Mobile App
 
-...
+* React Native App
 
 ### Website
 
-...
+* Static Bootstrap app
 
 ## Honorble mensions
 
